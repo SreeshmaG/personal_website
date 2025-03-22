@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sreeshma G - Portfolio</title>
+    <style>
+        /* Vibrant Color Scheme */
+        :root {
+            --primary: #6a11cb;
+            --secondary: #2575fc;
+            --accent: #ff6b6b;
+            --dark: #2d3436;
+            --background: linear-gradient(45deg, #1a1a2e 0%, #16213e 100%);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: var(--background);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            padding: 4rem 0;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            position: relative;
+        }
+
+        .header-content {
+            width: 85%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            animation: slideIn 1s ease;
+        }
+
+        .profile-pic {
+            width: 180px;
+            height: 180px;
+            border-radius: 15px;
+            border: 4px solid rgba(255,255,255,0.2);
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-pic:hover {
+            transform: rotate(3deg) scale(1.05);
+        }
+
+        nav {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1.2rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 20px;
+            padding: 10px 15px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-2px);
+        }
+
+        .container {
+            width: 85%;
+            margin: auto;
+            padding: 4rem 0;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 5px;
+            height: 4px;
+            width: 70px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        .project-card, .experience-card, .education-card, .skills-grid, .about-section {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover, .experience-card:hover, .education-card:hover, .skills-grid:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        .project-img {
+            width: 100%;
+            border-radius: 10px;
+            border: 2px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project-img:hover {
+            transform: scale(1.02);
+        }
+
+        .experience-img {
+            max-width: 200px; /* Reduced image size */
+            border-radius: 10px;
+            border: 2px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .experience-img:hover {
+            transform: scale(1.02);
+        }
+
+        .skill-item {
+            background: rgba(255,255,255,0.05);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .skill-item:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateX(10px);
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 2rem;
+            }
+            
+            .project-card, .experience-card {
+                flex-direction: column;
+            }
+
+            .experience-img {
+                max-width: 100%; /* Full width on mobile */
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="deco-circle" style="top: -150px; right: -150px;"></div>
+    <div class="deco-circle" style="bottom: -150px; left: -150px;"></div>
+
+    <header>
+        <div class="header-content">
+            <div>
+                <h1>Sreeshma G</h1>
+                <p>+91-9597236056 | ✅sreeshma.g.aiml.2022@snsct.org</p>
+                <div style="display: flex; gap: 10px;">
+                    <a href="https://www.linkedin.com/in/sreeshma-g" style="color: white; text-decoration: none;">
+                        <span style="display: inline-block; padding: 8px 20px; background: rgba(255,255,255,0.1); border-radius: 8px; transition: all 0.3s ease;">
+                            🔗 LinkedIn Profile
+                        </span>
+                    </a>
+                    <a href="https://github.com/SreeshmaG" style="color: white; text-decoration: none;">
+                        <span style="display: inline-block; padding: 8px 20px; background: rgba(255,255,255,0.1); border-radius: 8px; transition: all 0.3s ease;">
+                            🐙 GitHub Profile
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <img src="images/sree_resumepic.jpg" alt="Sreeshma G" class="profile-pic">
+        </div>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <!-- About Section with Skills, Education, and Projects -->
+        <section id="about" class="about-section">
+            <h2>About Me</h2>
+            <p>Pre-Final-Year B.Tech (AIML) student with a strong foundation in software development and AI-driven applications. Adept at problem-solving, collaborating in cross-functional teams, and continuously learning emerging technologies to drive innovation.</p>
+
+            <!-- Skills Section -->
+            <div class="skills-grid">
+                <h3>Skills</h3>
+                <div class="skill-item">
+                    <h4>Technical Skills</h4>
+                    <ul>
+                        <li>Python, C++, Java</li>
+                        <li>HTML/CSS, React</li>
+                        <li>MySQL, Git/GitHub</li>
+                    </ul>
+                </div>
+                <div class="skill-item">
+                    <h4>Soft Skills</h4>
+                    <ul>
+                        <li>Team Collaboration</li>
+                        <li>Problem Solving</li>
+                        <li>Time Management</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Education Section -->
+            <div class="education-card">
+                <h3>Education</h3>
+                <ul>
+                    <li><strong>B.Tech (AIML)</strong> - SNS College of Technology, Coimbatore | CGPA: 8.96 (Current) | 2022-2026</li>
+                    <li><strong>Secondary</strong> - Avila Convent Matric Hr.Sec School, Coimbatore | 87.0% | 2022</li>
+                    <li><strong>Secondary</strong> - Amrita Vidyalayam, Coimbatore | 92.0% | 2020</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-card">
+                <img src="images/fitness-trainer.png" alt="AI Fitness Trainer" class="project-img">
+                <div>
+                    <h3>🤖 AI-powered Fitness Trainer</h3>
+                    <p>Real-time posture correction using MediaPipe and OpenCV with dynamic workout adaptation...</p>
+                    <div style="margin-top: 1rem; display: flex; gap: 10px;">
+                        <span style="background: var(--accent); padding: 5px 15px; border-radius: 20px; font-size: 0.9rem;">AI/ML</span>
+                        <span style="background: var(--secondary); padding: 5px 15px; border-radius: 20px; font-size: 0.9rem;">Computer Vision</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="images/diet-system.png" alt="Diet Recommendation" class="project-img">
+                <div>
+                    <h3>🍏 Diet Recommendation System</h3>
+                    <p>K-Means clustering for personalized meal plans with nutritional optimization...</p>
+                    <div style="margin-top: 1rem; display: flex; gap: 10px;">
+                        <span style="background: var(--primary); padding: 5px 15px; border-radius: 20px; font-size: 0.9rem;">Machine Learning</span>
+                        <span style="background: var(--accent); padding: 5px 15px; border-radius: 20px; font-size: 0.9rem;">Data Science</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            <div class="experience-card">
+                <img src="images/internship1.jpg" alt="NxtLogic Internship" class="experience-img">
+                <div>
+                    <h3>💻 Full-Stack Development – Python (NxtLogic)</h3>
+                    <ul>
+                        <li>Engineered end-to-end web applications using Django/Flask</li>
+                        <li>Developed dynamic interfaces with modern frontend stack</li>
+                        <li>Implemented REST APIs with 95% test coverage</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-card">
+                <div>
+                    <h3>🌐 Web Development – Cognifyz</h3>
+                    <ul>
+                        <li>Built responsive web applications with React ecosystem</li>
+                        <li>Optimized performance by 40% through code splitting</li>
+                        <li>Implemented CI/CD pipeline for automated deployments</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Feel free to reach out to me via email at <a href="mailto:sreeshma.g.aiml.2022@snsct.org" style="color: var(--accent);">sreeshma.g.aiml.2022@snsct.org</a>.</p>
+        </section>
+    </div>
+</body>
+</html>
